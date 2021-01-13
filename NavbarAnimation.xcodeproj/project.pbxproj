@@ -13,6 +13,7 @@
 		612FD89E25AE9B1600B87E05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612FD89C25AE9B1600B87E05 /* Main.storyboard */; };
 		612FD8A025AE9B1700B87E05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612FD89F25AE9B1700B87E05 /* Assets.xcassets */; };
 		612FD8A325AE9B1700B87E05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612FD8A125AE9B1700B87E05 /* LaunchScreen.storyboard */; };
+		612FD8AD25AE9E4B00B87E05 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FD8AC25AE9E4B00B87E05 /* UIColorHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		612FD89F25AE9B1700B87E05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		612FD8A225AE9B1700B87E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		612FD8A425AE9B1700B87E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		612FD8AC25AE9E4B00B87E05 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				612FD89625AE9B1600B87E05 /* AppDelegate.swift */,
 				612FD89825AE9B1600B87E05 /* SceneDelegate.swift */,
 				612FD89A25AE9B1600B87E05 /* ViewController.swift */,
+				612FD8AC25AE9E4B00B87E05 /* UIColorHex.swift */,
 				612FD89C25AE9B1600B87E05 /* Main.storyboard */,
 				612FD89F25AE9B1700B87E05 /* Assets.xcassets */,
 				612FD8A125AE9B1700B87E05 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				612FD89B25AE9B1600B87E05 /* ViewController.swift in Sources */,
+				612FD8AD25AE9E4B00B87E05 /* UIColorHex.swift in Sources */,
 				612FD89725AE9B1600B87E05 /* AppDelegate.swift in Sources */,
 				612FD89925AE9B1600B87E05 /* SceneDelegate.swift in Sources */,
 			);
