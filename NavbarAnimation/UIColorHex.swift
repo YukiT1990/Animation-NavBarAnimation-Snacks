@@ -20,9 +20,7 @@ import UIKit
  */
 extension UIColor {
     convenience init(hex: String, alpha: CGFloat = 1.0) {
-//        print(hex)
         let noHashHex = hex.suffix(6)
-//        print(noHashHex)
         let v = Int(noHashHex, radix: 16) ?? 0
         let r = CGFloat(v / Int(powf(256, 2)) % 256) / 255
         let g = CGFloat(v / Int(powf(256, 1)) % 256) / 255

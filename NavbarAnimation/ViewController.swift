@@ -39,10 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let originalFrame = CGRect(x: 0, y: 0, width: width, height: 88)
         
         navigationBar.backgroundColor = UIColor(hex: "#DDDDDD")
-        
         navigationBar.frame = originalFrame
-        
-//        let addButton = UIButton()
         
         addButton.setTitle("＋", for: .normal)
         addButton.setTitleColor(UIColor(hex: "#32a4a8"), for: .normal)
@@ -58,16 +55,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func stackViewFunc() {
         
-//        stackView.backgroundColor = .red
-        
         stackView.axis = .horizontal
-        stackView.alignment = .fill // .leading .firstBaseline .center .trailing .lastBaseline
-        stackView.distribution = .fillEqually // .fillEqually .fillProportionally .equalSpacing .equalCentering
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        // UILayoutGuide did not work well
         self.navigationBar.addSubview(stackView)
         NSLayoutConstraint.activate([
-//            stackView.topAnchor.constraint(equalTo: view.topAnchor),
             stackView.heightAnchor.constraint(equalTo: navigationBar.heightAnchor, multiplier: 1),
             stackView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -212,7 +207,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     @objc func addTapped(sender: UIButton) {
-//        print("plus icon pressed")
+
         let rotateTransform = CGAffineTransform(rotationAngle: .pi/4)
         
         if plusButtonTapped == false {
@@ -224,12 +219,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
          dampingRatio -> Employ a damping ratio closer to zero to increase oscillation.
          */
         UIView.animate(withDuration: 1.0, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 10) {
+            // items are shown
             if self.plusButtonTapped == true {
                 self.stackView.isHidden = false
                 self.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200)
                 self.addButton.transform = rotateTransform
                 self.tableView.frame = CGRect(x: self.tableView.frame.origin.x, y: self.tableView.frame.origin.y + 112, width: self.tableView.frame.size.width, height: self.tableView.contentSize.height)
                 self.stackView.frame = CGRect(x: self.stackView.frame.origin.x, y: self.stackView.frame.origin.y + 112, width: self.stackView.frame.size.width, height: self.stackView.frame.size.height)
+            // items are not shown
             } else {
                 self.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 88)
                 self.stackView.isHidden = true
@@ -245,7 +242,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         
         view.addSubview(tableView)
-//        tableView.backgroundColor = .red
+
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
